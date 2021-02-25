@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     saveRating() {
-      // TODO
+      // TODO save to API
       this.$router.push('/comparison')
     }
   }
