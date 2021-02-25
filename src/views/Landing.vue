@@ -6,7 +6,7 @@
         <h2><router-link :to="`/vote/${gateway.name}`">{{gateway.displayName}}</router-link></h2>
       </section>
     </div>
-    <p><router-link to="comparison">még semmit...</router-link></p>
+    <p><router-link to="/comparison">még semmit...</router-link></p>
   </div>
 </template>
 

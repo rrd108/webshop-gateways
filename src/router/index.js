@@ -11,7 +11,7 @@ const routes = [
     component: Landing
   },
   {
-    path: 'comparison',
+    path: '/comparison',
     name: 'Comparison',
     component: () => import(/* webpackChunkName: "comparison" */ '../views/Comparison.vue')
   },
