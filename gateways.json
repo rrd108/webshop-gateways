@@ -1,0 +1,24 @@
+[
+    {
+        "name" : "SimplePay",
+        "join" : "40-50 e",
+        "comission" : "1,6%",
+        "satisfaction": 5,
+        "plugins" : [
+            "woocommerce" : "https://webmania.cc/termek/woocommerce-simplepay-plugin/",
+            "prestashop" : "https://addons.prestashop.com/en/payment-card-wallet/26667-simplepay.html"
+        ]
+    },
+    {
+        "name" : "Paylike",
+        "satisfaction": 2.5,
+    },
+    {
+        "name" : "PayPal",
+        "satisfaction": 2.5,
+    },
+    {
+        "name" : "Barion",
+        "satisfaction": 2.5,
+    },
+]

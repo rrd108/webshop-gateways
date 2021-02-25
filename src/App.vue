@@ -1,28 +1,93 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <router-link to="/" title="Nyitólap">
+        <font-awesome-icon icon="igloo" />
+      </router-link>
+      <font-awesome-icon icon="lightbulb" />
+    </header>
+    <main>
+      <transition name="slide">
+        <router-view/>
+      </transition>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #010;
+  color: #fff;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+}
+header {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: .3rem 1rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.slide-enter-active {
+  transition: all 250ms ease-in-out;
+}
+.slide-leave-active {
+  transition: all 250ms ease-in-out;
+}
+.slide-enter, .slide-leave-to {
+  transform: translateY(100vh);
+  opacity: 0;
+}
+
+#simplepay {
+  background-color: #d64045cc;
+}
+#simplepay::before {
+  background-color: #d64045;
+}
+#barion {
+  background-color: #477998cc;
+}
+#barion::before {
+  background-color: #477998;
+}
+#paylike {
+  background-color: #791E94cc;
+}
+#paylike::before {
+  background-color: #791E94;
+}
+#paypal {
+  background-color: #009B72cc;
+}
+#paypal::before {
+  background-color: #009B72;
 }
 </style>
