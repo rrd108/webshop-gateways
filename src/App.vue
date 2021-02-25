@@ -40,6 +40,8 @@ body {
 }
 #app {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 header {
   font-size: 2rem;
@@ -52,7 +54,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
 }
 a {
   text-decoration: none;
@@ -70,28 +71,28 @@ a {
   opacity: 0;
 }
 
-#simplepay {
+.simplepay {
   background-color: #d64045cc;
 }
-#simplepay::before {
+.simplepay::before {
   background-color: #d64045;
 }
-#barion {
+.barion {
   background-color: #477998cc;
 }
-#barion::before {
+.barion::before {
   background-color: #477998;
 }
-#paylike {
+.paylike {
   background-color: #791E94cc;
 }
-#paylike::before {
+.paylike::before {
   background-color: #791E94;
 }
-#paypal {
+.paypal {
   background-color: #009B72cc;
 }
-#paypal::before {
+.paypal::before {
   background-color: #009B72;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Mi a tapasztalatod?</h1>
-    <section :id="gateway.name">
+    <section :class="gateway.name">
       <h2>{{gateway.displayName}}</h2>
       <star-rating v-model="rating" :show-rating="false" :round-start-rating="false"></star-rating>
       <h3>{{rating.toFixed(1)}}</h3>

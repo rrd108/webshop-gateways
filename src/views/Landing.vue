@@ -2,7 +2,7 @@
   <div>
     <h1>Mit használsz?</h1>
     <div>
-      <section v-for="gateway in gateways" :key="gateway.name" :id="gateway.name">
+      <section v-for="gateway in gateways" :key="gateway.name" :class="gateway.name">
         <h2><router-link :to="`/vote/${gateway.name}`">{{gateway.displayName}}</router-link></h2>
       </section>
     </div>
