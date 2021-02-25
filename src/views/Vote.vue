@@ -3,7 +3,7 @@
     <h1>Mi a tapasztalatod?</h1>
     <section :class="gateway.name">
       <h2>{{gateway.displayName}}</h2>
-      <star-rating v-model="rating" :show-rating="false" :round-start-rating="false"></star-rating>
+      <star-rating v-model="rating" :show-rating="false" :round-start-rating="false" @rating-selected="saveRating"></star-rating>
       <h3>{{rating.toFixed(1)}}</h3>
     </section>
     <p>Szavazz a csillagokkal!</p>
@@ -19,15 +19,31 @@ export default {
   components: {
     StarRating
   },
+  data() {
+    return {
+      rate: null,
+    }
+  },
   mixins: [GatewaysMixin],
   computed: {
     gateway() {
       return this.gateways.find(gateway => gateway.name == this.$route.params.name)
     },
-    rating() {
-      return this.gateway.stars.reduce((total, currentValue, currentIndex) => total + (currentIndex + 1) * currentValue) / this.gateway.stars.reduce((total, currentValue) => total + currentValue)
+    rating: {
+      get() {
+        return this.gateway.stars.reduce((total, currentValue, currentIndex) => total + (currentIndex + 1) * currentValue) / this.gateway.stars.reduce((total, currentValue) => total + currentValue)
+      },
+      set(newValue) {
+        this.rate = newValue
+      }
     }
   },
+  methods: {
+    saveRating() {
+      // TODO
+      this.$router.push('/comparison')
+    }
+  }
 }
 </script>
 
