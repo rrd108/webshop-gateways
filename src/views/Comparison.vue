@@ -1,29 +1,30 @@
 <template>
-  <div>
+  <div id="comparison">
     <section v-for="gateway in gateways" :key="gateway.name" :class="gateway.name">
       <h2>{{gateway.displayName}}</h2>
       <h3 :class="gateway.name">{{rating(gateway)}}</h3>
 
       <span>Csatlakozási díj</span>
-      <p>40.000</p>
+      <p>{{gateway.joinFee ? gateway.joinFee : '-'}}</p>
 
       <span>Jutalék</span>
-      <p>1,6%</p>
+      <p>{{gateway.comission}}</p>
 
       <span>Ügyfél szolgálat</span>
       <p class="mini">
-        <font-awesome-icon icon="star" />
-        <font-awesome-icon icon="star" />
-        <font-awesome-icon icon="star" />
-        <font-awesome-icon icon="star" />
-        <font-awesome-icon icon="star" />
+        <star-rating v-model="gateway.support" :show-rating="false" :round-start-rating="false" :star-size="15" :read-only="true"></star-rating>
       </p>
 
-      <span>Woo</span>
-      <p><font-awesome-icon icon="link" /></p>
+      <div v-show="gateway.plugins.woocommerce">
+        <span>Woo</span>
+        <p><a :href="gateway.plugins.woocommerce"><font-awesome-icon icon="link" /></a></p>
+      </div>
 
-      <span>Prestashop</span>
-      <p><font-awesome-icon icon="link" /></p>
+      <div v-show="gateway.plugins.woocommerce">
+        <span>Prestashop</span>
+        <p><a :href="gateway.plugins.prestashop"><font-awesome-icon icon="link" /></a></p>
+      </div>
+
 
     </section>
   </div>
@@ -31,9 +32,13 @@
 
 <script>
 import GatewaysMixin from '@/mixins/GatewaysMixin'
+import StarRating from 'vue-star-rating'
 
 export default {
   name: 'Comparison',
+  components: {
+    StarRating
+  },
   mixins: [GatewaysMixin],
   methods: {
     rating(gateway) {
@@ -44,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
+#comparison {
   display: flex;
   width: 100vw;
   justify-content: space-around;
@@ -53,7 +58,6 @@ div {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   flex: 1 1 0;
@@ -87,10 +91,6 @@ section {
     border-bottom: 1px solid #ffffff44;
     margin-bottom: .5rem;
     font-size: 1.3rem;
-
-  &.mini {
-    font-size: .6rem;
-  }
   }
 }
 section::before {

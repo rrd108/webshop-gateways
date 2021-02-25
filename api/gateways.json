@@ -2,8 +2,9 @@
     {
         "name": "simplepay",
         "displayName": "SimplePay",
-        "join": "40-50 e",
+        "joinFee": "40-50 e",
         "comission": "1,6%",
+        "support": 3.8,
         "stars": [0,0,1,0,0],
         "plugins": {
             "woocommerce": "https://webmania.cc/termek/woocommerce-simplepay-plugin/",
@@ -13,16 +14,37 @@
     {
         "name": "paylike",
         "displayName": "Paylike",
-        "stars": [0,0,1,0,0]
+        "comission": "1,4%",
+        "support": 3.2,
+        "stars": [0,0,1,0,0],
+        "plugins": {
+            "woocommerce": null,
+            "prestashop": null
+        }
+
     },
     {
         "name": "paypal",
         "displayName": "PayPal",
-        "stars": [0,0,1,0,0]
+        "comission": "1,8%",
+        "support": 1.2,
+        "stars": [0,0,1,0,0],
+        "plugins": {
+            "woocommerce": null,
+            "prestashop": null
+        }
+
     },
     {
         "name": "barion",
         "displayName": "Barion",
-        "stars": [0,0,1,0,0]
+        "comission": "1,3%",
+        "support": 1.2,
+        "stars": [0,0,1,0,0],
+        "plugins": {
+            "woocommerce": null,
+            "prestashop": null
+        }
+
     }
 ]
