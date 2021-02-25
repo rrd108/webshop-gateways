@@ -16,6 +16,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "comparison" */ '../views/Comparison.vue')
   },
   {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
+  },
+  {
     path: '/vote/:name',
     name: 'Vote',
     component: () => import(/* webpackChunkName: "vote" */ '../views/Vote.vue')

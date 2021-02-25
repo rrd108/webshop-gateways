@@ -4,7 +4,9 @@
       <router-link to="/" title="Nyitólap">
         <font-awesome-icon icon="igloo" />
       </router-link>
-      <font-awesome-icon icon="lightbulb" />
+      <router-link to="/contact" title="Contact">
+        <font-awesome-icon icon="lightbulb" />
+      </router-link>
     </header>
     <main>
       <transition name="slide">
