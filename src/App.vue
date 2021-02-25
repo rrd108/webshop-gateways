@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <router-link to="/" title="Nyitólap">
-        <font-awesome-icon icon="igloo" />
+        <font-awesome-icon icon="home" />
       </router-link>
       <router-link to="/contact" title="Contact">
         <font-awesome-icon icon="lightbulb" />
