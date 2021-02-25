@@ -4,11 +4,11 @@
       <h2>{{gateway.displayName}}</h2>
       <h3 :class="gateway.name">{{rating(gateway)}}</h3>
 
-      <span>Csatlakozási díj</span>
-      <p>{{gateway.joinFee ? gateway.joinFee : '-'}}</p>
-
       <span>Jutalék</span>
       <p>{{gateway.comission}}</p>
+
+      <span>Csatlakozási díj</span>
+      <p>{{gateway.joinFee ? gateway.joinFee : '-'}}</p>
 
       <span>Ügyfél szolgálat</span>
       <p class="mini">
