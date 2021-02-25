@@ -1,30 +1,21 @@
 <template>
-  <div id="app">
-    <main>
-      <h1>Mit használsz?</h1>
-      <div>
-        <section id="simplepay">
-          <h2><router-link to="/simplepay">SimplePay</router-link></h2>
-        </section>
-        <section id="barion">
-          <h2>Barion</h2>
-        </section>
-        <section id="paylike">
-          <h2>Paylike</h2>
-        </section>
-        <section id="paypal">
-          <h2>PayPal</h2>
-        </section>
-      </div>
-      <p>még semmit...</p>
-    </main>
+  <div>
+    <h1>Mit használsz?</h1>
+    <div>
+      <section v-for="gateway in gateways" :key="gateway.name" :id="gateway.name">
+        <h2><router-link :to="`/vote/${gateway.name}`">{{gateway.displayName}}</router-link></h2>
+      </section>
+    </div>
+    <p><router-link to="comparison">még semmit...</router-link></p>
   </div>
 </template>
 
 <script>
+import GatewaysMixin from '@/mixins/GatewaysMixin'
 
 export default {
   name: 'Landing',
+  mixins: [GatewaysMixin]
 }
 </script>
 
@@ -36,6 +27,7 @@ h1 {
 div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 section {

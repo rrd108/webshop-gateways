@@ -1,27 +1,33 @@
 <template>
   <div>
     <h1>Mi a tapasztalatod?</h1>
-    <section id="simplepay">
-      <h2>SimplePay</h2>
+    <section :id="gateway.name">
+      <h2>{{gateway.displayName}}</h2>
       <star-rating v-model="rating" :show-rating="false" :round-start-rating="false"></star-rating>
+      <h3>{{rating.toFixed(1)}}</h3>
     </section>
     <p>Szavazz a csillagokkal!</p>
   </div>
 </template>
 
 <script>
+import GatewaysMixin from '@/mixins/GatewaysMixin'
 import StarRating from 'vue-star-rating'
 
 export default {
-  name: 'SimplePay',
+  name: 'Vote',
   components: {
     StarRating
   },
-  data() {
-    return {
-      rating: 2.4
+  mixins: [GatewaysMixin],
+  computed: {
+    gateway() {
+      return this.gateways.find(gateway => gateway.name == this.$route.params.name)
+    },
+    rating() {
+      return this.gateway.stars.reduce((total, currentValue, currentIndex) => total + (currentIndex + 1) * currentValue) / this.gateway.stars.reduce((total, currentValue) => total + currentValue)
     }
-  }
+  },
 }
 </script>
 
@@ -48,6 +54,10 @@ section {
   h2 {
     margin-bottom: 2.5rem;
     z-index: 1;
+  }
+
+  h3 {
+    margin-top: 1rem;
   }
 }
 

@@ -11,9 +11,14 @@ const routes = [
     component: Landing
   },
   {
-    path: '/simplepay',
-    name: 'SimplePay',
-    component: () => import(/* webpackChunkName: "simplepay" */ '../views/SimplePay.vue')
+    path: 'comparison',
+    name: 'Comparison',
+    component: () => import(/* webpackChunkName: "comparison" */ '../views/Comparison.vue')
+  },
+  {
+    path: '/vote/:name',
+    name: 'Vote',
+    component: () => import(/* webpackChunkName: "vote" */ '../views/Vote.vue')
   }
 ]
 

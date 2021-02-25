@@ -15,10 +15,14 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   name: 'App',
-  components: {
+  created() {
+    axios.get(process.env.VUE_APP_API_URL)
+      .then(response => localStorage.gateways = JSON.stringify(response.data))
+      .catch(error => console.error(error))
   }
 }
 </script>
