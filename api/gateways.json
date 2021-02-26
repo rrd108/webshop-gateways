@@ -3,8 +3,10 @@
         "name": "simplepay",
         "displayName": "SimplePay",
         "url": "https://simplepay.hu/kereskedoknek/",
+        "registration": "2 hét",
         "joinFee": "40-50 e",
         "comission": "1,6%",
+        "paying": "2 hetente",
         "support": 3.8,
         "stars": [0,0,1,0,0],
         "plugins": {
@@ -16,7 +18,9 @@
         "name": "paylike",
         "displayName": "Paylike",
         "url": "https://paylike.hu/",
+        "registration": "1 nap",
         "comission": "1,1% + 75Ft",
+        "paying": "tetszőleges",
         "support": 3.2,
         "stars": [0,0,1,0,0],
         "plugins": {
@@ -29,7 +33,9 @@
         "name": "paypal",
         "displayName": "PayPal",
         "url": "https://www.paypal.com/",
+        "registration": "azonnali",
         "comission": "3,4% + 90Ft",
+        "paying": "azonnali",
         "support": 1.2,
         "stars": [0,0,1,0,0],
         "plugins": {
@@ -42,7 +48,9 @@
         "name": "barion",
         "displayName": "Barion",
         "url": "https://www.barion.com/",
+        "registration": "2 hét",
         "comission": "1-1,5%",
+        "paying": "tetszőleges",
         "support": 1.2,
         "stars": [0,0,1,0,0],
         "plugins": {
