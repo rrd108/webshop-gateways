@@ -41,14 +41,18 @@ export default {
   },
   methods: {
     saveRating(rating) {
-      // TODO save to API
       axios.put(process.env.VUE_APP_API_URL, {
         gateway: this.gateway.name,
         rating
         })
-        .then(response => console.log(response.data))
+        .then(response => {
+          console.log(response.data)
+          let gateways = this.gateways
+          gateways.find(gateway => gateway.name == this.gateway.name).stars[rating]++
+          localStorage.gateways = JSON.stringify(gateways)
+          this.$router.push('/comparison')
+          })
         .catch(error => console.error(error))
-      this.$router.push('/comparison')
     }
   }
 }
