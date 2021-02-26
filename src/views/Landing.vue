@@ -31,9 +31,9 @@ div {
 }
 
 section {
-  width: 35vw;
+  width: 40vw;
   max-width: 20rem;
-  height: 35vw;
+  height: 40vw;
   max-height: 20rem;
   margin: 1rem;
   display: flex;
