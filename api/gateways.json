@@ -6,7 +6,7 @@
         "registration": "2 hét",
         "joinFee": "40-50 e",
         "comission": "1,6%",
-        "paying": "2 hetente",
+        "paying": "2 hét",
         "support": 3.8,
         "stars": [0,0,1,0,0],
         "plugins": {
@@ -20,7 +20,7 @@
         "url": "https://paylike.hu/",
         "registration": "1 nap",
         "comission": "1,1% + 75Ft",
-        "paying": "tetszőleges",
+        "paying": "tárca",
         "support": 3.2,
         "stars": [0,0,1,0,0],
         "plugins": {
@@ -35,7 +35,7 @@
         "url": "https://www.paypal.com/",
         "registration": "azonnali",
         "comission": "3,4% + 90Ft",
-        "paying": "azonnali",
+        "paying": "tárca",
         "support": 1.2,
         "stars": [0,0,1,0,0],
         "plugins": {
@@ -50,7 +50,7 @@
         "url": "https://www.barion.com/",
         "registration": "2 hét",
         "comission": "1-1,5%",
-        "paying": "tetszőleges",
+        "paying": "tárca",
         "support": 1.2,
         "stars": [0,0,1,0,0],
         "plugins": {
