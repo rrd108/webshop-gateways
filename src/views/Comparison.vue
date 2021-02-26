@@ -17,10 +17,10 @@
       <p><star-rating v-model="gateway.support" :show-rating="false" :round-start-rating="false" :star-size="15" :read-only="true"></star-rating></p>
 
       <span>Kifizetés</span>
-      <p class="s">{{gateway.paying}}</p>
+      <p>{{gateway.paying}}</p>
 
       <span>Élesítés</span>
-      <p class="s">{{gateway.registration}}</p>
+      <p>{{gateway.registration}}</p>
 
       <div v-show="gateway.plugins.woocommerce">
         <span>Woo</span>
@@ -99,9 +99,6 @@ section {
     margin-bottom: .5rem;
     font-size: 1.3rem;
 
-    &.s {
-      font-size: .8rem;
-    }
     &.r2 {
       height: 4.2rem;
     }
