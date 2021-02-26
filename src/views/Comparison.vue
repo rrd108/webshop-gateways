@@ -64,15 +64,16 @@ section {
   padding: 1rem .3rem;
 
   h2 {
-    font-size: 1rem;
     z-index: 1;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
 
   h3 {
+    z-index: 1;
     border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
     border: medium solid #fff;
     display: flex;
     justify-content: center;
@@ -99,7 +100,7 @@ section::before {
   bottom: 0;
   left: 0;
   right: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 1rem, 0 3rem);
+  clip-path: polygon(0 0, 100% 0, 100% 3rem, 0 6rem);
 }
 
 @media only screen and (min-width: 48rem) {
