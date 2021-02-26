@@ -78,7 +78,6 @@ section {
   align-items: center;
   font-weight: 900;
   position: relative;
-  cursor: pointer;
   font-size: 2rem;
 
   h2 {
