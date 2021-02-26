@@ -18,6 +18,7 @@ app.put('/', (req, res) => {
   let gateway = (gateways.find(gateway => gateway.name == req.body.gateway))
   gateway.stars[req.body.rating - 1]++
   fs.writeFile('./gateways.json', JSON.stringify(gateways), (err) => console.error(err))
+  res.json({ msg: 'Rating saved'})
 })
 
 
