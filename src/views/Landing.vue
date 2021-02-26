@@ -31,8 +31,10 @@ div {
 }
 
 section {
-  width: 40vw;
-  height: 40vw;
+  width: 35vw;
+  max-width: 20rem;
+  height: 35vw;
+  max-height: 20rem;
   margin: 1rem;
   display: flex;
   justify-content: center;

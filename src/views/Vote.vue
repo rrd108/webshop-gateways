@@ -56,7 +56,9 @@ div {
 }
 section {
   width: 80vw;
+  max-width: 45rem;
   height: 80vw;
+  max-height: 45rem;
   margin: 1rem;
   display: flex;
   flex-direction: column;

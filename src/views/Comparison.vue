@@ -24,8 +24,6 @@
         <span>Prestashop</span>
         <p><a :href="gateway.plugins.prestashop"><font-awesome-icon icon="link" /></a></p>
       </div>
-
-
     </section>
   </div>
 </template>
@@ -52,6 +50,7 @@ export default {
 #comparison {
   display: flex;
   width: 100vw;
+  max-width: 62rem;
   justify-content: space-around;
   gap: .3rem;
 }
@@ -102,4 +101,28 @@ section::before {
   right: 0;
   clip-path: polygon(0 0, 100% 0, 100% 1rem, 0 3rem);
 }
+
+@media only screen and (min-width: 48rem) {
+  #comparison {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  section {
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      height: 5rem;
+      width: 5rem;
+      font-size: 2rem;
+    }
+    span {
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: 1.7rem;
+    }
+  }
+}
+
 </style>

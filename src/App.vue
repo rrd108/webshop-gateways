@@ -44,6 +44,8 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  max-width: 62rem;
+  margin: 0 auto;
 }
 header {
   font-size: 2rem;
