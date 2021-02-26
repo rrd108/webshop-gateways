@@ -7,6 +7,7 @@
       <h3>{{rating.toFixed(1)}}</h3>
     </section>
     <p>Szavazz a csillagokkal!</p>
+    <p><router-link to="/comparison">nem szavazok...</router-link></p>
   </div>
 </template>
 
@@ -98,5 +99,8 @@ section::before {
   left: 0;
   right: 0;
   clip-path: polygon(0 0, 100% 0, 100% 25%, 0 45%);
+}
+p {
+  margin-top: 1rem;
 }
 </style>
