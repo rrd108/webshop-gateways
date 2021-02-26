@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faLightbulb, faHome, faLink, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faLightbulb, faEnvelope, faHome, faLink, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import router from './router'
 
-library.add(faLightbulb, faHome, faLink, faStar)
+library.add(faLightbulb, faEnvelope, faHome, faLink, faStar)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
