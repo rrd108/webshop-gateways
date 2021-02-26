@@ -37,7 +37,6 @@ section {
   align-items: center;
   font-weight: 900;
   position: relative;
-  cursor: pointer;
 
   h2 {
     font-size: 1.5rem;
