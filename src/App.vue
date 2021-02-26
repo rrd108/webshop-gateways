@@ -4,6 +4,7 @@
       <router-link to="/" title="Nyitólap">
         <font-awesome-icon icon="home" />
       </router-link>
+      <a href="https://webmania.cc"><img src="./assets/logo.png" alt="logo"></a>
       <router-link to="/contact" title="Contact">
         <font-awesome-icon icon="lightbulb" />
       </router-link>
@@ -52,6 +53,10 @@ header {
   display: flex;
   justify-content: space-between;
   padding: .3rem 1rem;
+
+  img {
+    height: 2rem;
+  }
 }
 main {
   display: flex;
