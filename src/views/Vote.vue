@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import GatewaysMixin from '@/mixins/GatewaysMixin'
 import StarRating from 'vue-star-rating'
 
@@ -39,8 +40,14 @@ export default {
     }
   },
   methods: {
-    saveRating() {
+    saveRating(rating) {
       // TODO save to API
+      axios.put(process.env.VUE_APP_API_URL, {
+        gateway: this.gateway.name,
+        rating
+        })
+        .then(response => console.log(response.data))
+        .catch(error => console.error(error))
       this.$router.push('/comparison')
     }
   }
