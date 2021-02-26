@@ -8,15 +8,19 @@
       <p><a :href="gateway.url"><font-awesome-icon icon="link" /></a></p>
 
       <span>Jutalék</span>
-      <p>{{gateway.comission}}</p>
+      <p class="r2">{{gateway.comission}}</p>
 
       <span>Csatlakozási díj</span>
       <p>{{gateway.joinFee ? gateway.joinFee : '-'}}</p>
 
       <span>Ügyfél szolgálat</span>
-      <p class="mini">
-        <star-rating v-model="gateway.support" :show-rating="false" :round-start-rating="false" :star-size="15" :read-only="true"></star-rating>
-      </p>
+      <p><star-rating v-model="gateway.support" :show-rating="false" :round-start-rating="false" :star-size="15" :read-only="true"></star-rating></p>
+
+      <span>Kifizetés</span>
+      <p class="s">{{gateway.paying}}</p>
+
+      <span>Élesítés</span>
+      <p class="s">{{gateway.registration}}</p>
 
       <div v-show="gateway.plugins.woocommerce">
         <span>Woo</span>
@@ -94,6 +98,13 @@ section {
     border-bottom: 1px solid #ffffff44;
     margin-bottom: .5rem;
     font-size: 1.3rem;
+
+    &.s {
+      font-size: .8rem;
+    }
+    &.r2 {
+      height: 4.2rem;
+    }
   }
 }
 section::before {
