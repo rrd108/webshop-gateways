@@ -4,6 +4,9 @@
       <h2>{{gateway.displayName}}</h2>
       <h3 :class="gateway.name">{{rating(gateway)}}</h3>
 
+      <span>Web</span>
+      <p><a :href="gateway.url"><font-awesome-icon icon="link" /></a></p>
+
       <span>Jutalék</span>
       <p>{{gateway.comission}}</p>
 

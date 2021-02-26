@@ -2,6 +2,7 @@
     {
         "name": "simplepay",
         "displayName": "SimplePay",
+        "url": "https://simplepay.hu/kereskedoknek/",
         "joinFee": "40-50 e",
         "comission": "1,6%",
         "support": 3.8,
@@ -14,6 +15,7 @@
     {
         "name": "paylike",
         "displayName": "Paylike",
+        "url": "https://paylike.hu/",
         "comission": "1,1% + 75Ft",
         "support": 3.2,
         "stars": [0,0,1,0,0],
@@ -26,6 +28,7 @@
     {
         "name": "paypal",
         "displayName": "PayPal",
+        "url": "https://www.paypal.com/",
         "comission": "3,4% + 90Ft",
         "support": 1.2,
         "stars": [0,0,1,0,0],
@@ -38,6 +41,7 @@
     {
         "name": "barion",
         "displayName": "Barion",
+        "url": "https://www.barion.com/",
         "comission": "1-1,5%",
         "support": 1.2,
         "stars": [0,0,1,0,0],
