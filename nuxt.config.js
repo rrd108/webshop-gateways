@@ -47,5 +47,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  publicRuntimeConfig: {
+    apiURL: process.env.NODE_ENV === 'production' ? 'https://bankkartya.webmania.cc/api/' : 'http://localhost:5000'
   }
 }
