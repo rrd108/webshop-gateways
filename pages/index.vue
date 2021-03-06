@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <h1 class="title">
         webshop-gateways
       </h1>
@@ -28,7 +27,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'Webshop bankkártyás fizetési megoldások összehasonlítása'
+    }
+  }
+}
 </script>
 
 <style>
