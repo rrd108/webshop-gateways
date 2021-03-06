@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'webshop-gateways',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'hu'
     },
     meta: [
       { charset: 'utf-8' },
