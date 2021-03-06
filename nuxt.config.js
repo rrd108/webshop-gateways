@@ -35,6 +35,14 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['nuxt-fontawesome', {
+      imports: [
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faLightbulb', 'faEnvelope', 'faHome', 'faLink', 'faStar']
+        },
+      ]
+    }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
