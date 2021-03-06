@@ -1,7 +1,7 @@
 const gateways = {
   computed: {
     gateways() {
-      return process.browser ? JSON.parse(localStorage.getItem('gateways')) : []  // TODO
+      return process.client ? JSON.parse(localStorage.getItem('gateways')) : []  // TODO
     }
   }
 }

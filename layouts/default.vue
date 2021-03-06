@@ -25,8 +25,8 @@ export default {
   created() {
     axios.get(this.$config.apiURL)
       .then(response => {
-        if (process.browser) {
-          localStorage.gateways = JSON.stringify(response.data)
+        if (process.client) {
+          localStorage.gateways = JSON.stringify(response.data) // TODO
         }
         })
       .catch(error => console.error(error))
