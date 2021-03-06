@@ -2,7 +2,7 @@
 node_modules
 dist
 .nuxt
-
+api/gateways.json
 
 # local env files
 .env.local
