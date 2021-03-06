@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import GatewaysMixin from '@/mixins/GatewaysMixin'
+import GatewaysMixin from '~/mixins/GatewaysMixin'
 import StarRating from 'vue-star-rating'
 
 export default {
