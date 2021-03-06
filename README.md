@@ -1,40 +1,20 @@
-# Webshop Gateways for Hungary
+# webshop-gateways
 
-## Deploy the API to the server
+## Build Setup
 
-1. Install PM2
+```bash
+# install dependencies
+$ npm install
 
-`npm install -g pm2`
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-2. Create Service File
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-`pm2 startup systemd`
+# generate static project
+$ npm run generate
+```
 
-After this run the generated command.
-
-Test if the service is running with `systemctl status pm2-USERNAME`
-
-3. Set Reverse Proxy for Apache
-
-````
-cd /etc/apache2/sites-enabled/
-nano 100-bankkartya.webmania.cc.vhost
-````
-
-At the part of port 443, after the directory entries add this
-
-````
-ProxyRequests on
-ProxyPass /api/ http://localhost:5000/
-````
-
-Now `curl http://localhost:5000` should give you a response.
-
-4. Enable Apache Modules
-
-````
-a2enmod proxy_http
-````
-
-5. Restart Apache
-`systemctl restart apache2`
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
