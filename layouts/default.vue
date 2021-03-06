@@ -22,6 +22,11 @@ import axios from 'axios'
 
 export default {
   name: 'App',
+  head() {
+    return {
+      title: 'Webshop bankkártyás fizetési megoldások összehasonlítása'
+    }
+  },
   created() {
     axios.get(this.$config.apiURL)
       .then(response => {

@@ -16,11 +16,6 @@ import GatewaysMixin from '~/mixins/GatewaysMixin'
 export default {
   name: 'Landing',
   mixins: [GatewaysMixin],
-  head() {
-    return {
-      title: 'Webshop bankkártyás fizetési megoldások összehasonlítása'
-    }
-  }
 }
 </script>
 
