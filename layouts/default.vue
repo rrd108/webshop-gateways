@@ -18,8 +18,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'App',
   head() {
@@ -27,15 +25,6 @@ export default {
       title: 'Webshop bankkártyás fizetési megoldások összehasonlítása'
     }
   },
-  created() {
-    axios.get(this.$config.apiURL)
-      .then(response => {
-        if (process.client) {
-          localStorage.gateways = JSON.stringify(response.data) // TODO
-        }
-        })
-      .catch(error => console.error(error))
-  }
 }
 </script>
 

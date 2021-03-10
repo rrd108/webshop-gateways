@@ -1,8 +1,13 @@
 const gateways = {
-  computed: {
-    gateways() {
-      return process.client ? JSON.parse(localStorage.getItem('gateways')) : []  // TODO
+  data() {
+    return {
+      gateways: []
     }
+  },
+  created() {
+    axios.get(this.$config.apiURL)
+      .then(response => this.gateways = response.data)
+      .catch(error => console.error(error))
   }
 }
 

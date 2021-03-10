@@ -50,7 +50,6 @@ export default {
           //console.log(response.data)
           let gateways = this.gateways
           gateways.find(gateway => gateway.name == this.gateway.name).stars[rating]++
-          localStorage.gateways = process.client ? JSON.stringify(gateways) : []   // TODO
           this.$router.push('/comparison')
           })
         .catch(error => console.error(error))
