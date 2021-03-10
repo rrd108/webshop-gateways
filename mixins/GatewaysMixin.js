@@ -1,14 +1,13 @@
-const gateways = {
+import axios from 'axios'
+
+export default {
   data() {
     return {
-      gateways: []
+      gateways: [],
     }
   },
-  created() {
-    axios.get(this.$config.apiURL)
-      .then(response => this.gateways = response.data)
-      .catch(error => console.error(error))
+  async fetch() {
+    this.gateways = await axios.get(this.$config.apiURL)
+      .then(response => response.data)
   }
 }
-
-export default gateways
